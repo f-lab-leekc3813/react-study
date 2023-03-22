@@ -17,7 +17,7 @@ export default function StaticRoutingPage() {
     }
 
     const onClickMove100 = () => {
-        router.push("/05-08-dinamic-routed/100")
+        router.push("/05-08-dinamic-routed/274290")
     }
 
     return(
@@ -26,7 +26,7 @@ export default function StaticRoutingPage() {
             <button onClick = {onClickMove1}>1번 게시글로 이동하기.</button><br />
             <button onClick = {onClickMove2}>2번 게시글로 이동하기.</button><br />
             <button onClick = {onClickMove3}>3번 게시글로 이동하기.</button><br />
-            <button onClick = {onClickMove100}>100번 게시글로 이동하기.</button><br />
+            <button onClick = {onClickMove100}>274290번 게시글로 이동하기.</button><br />
         </>
     )
 }

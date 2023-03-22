@@ -13,9 +13,12 @@ const FETCH_BOARD = gql`
 
 export default function StaticRoutedPage() {
 
+    const router = useRouter()
+    console.log(router.query.number)
+
     const { data } = useQuery(FETCH_BOARD,{
         variables: {
-            number: 274290,
+            number: Number(router.query.number),
         }
     })
 
@@ -24,7 +27,7 @@ export default function StaticRoutedPage() {
 
     return (
         <>
-            <div>1번 게시글로 이동이 완료되었습니다 -쿼리!!</div>
+            <div>{router.query.number}번 게시글로 이동이 완료되었습니다 -쿼리!!</div>
             <div>Writer {data && data.fetchBoard.writer}</div>
             <div>Title {data && data.fetchBoard.title}</div>
             <div>Content {data && data.fetchBoard.contents}</div>
